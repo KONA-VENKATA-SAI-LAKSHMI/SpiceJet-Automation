@@ -122,7 +122,7 @@ public class SpiceJetOneWayAndTwoWay {
        // new WebDriverWait(dev, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='ui-datepicker-calendar']//tr//a[contains(@class,'ui-state-default') and contains(.,'29')]"))).click();
        // new WebDriverWait(dev, 20).until(ExpectedConditions.elementToBeClickable(By.xpath("//table[@class='ui-datepicker-calendar']//tr//a[contains(@class,'ui-state-default') and contains(.,'5')]"))).click();
         //System.out.println("Multicity");
-		dev.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_Ltc']")).click(); //Checkbox
+		dev.findElement(By.cssSelector("input[id*='ctl00_mainContent_chk_friendsandfamily']")).click(); //Checkbox
 		//Thread.sleep(4000);
 		//dev.findElement(By.xpath("//*[@id=\"MultiCityModelAlert")).click();
 		//dev.switchTo().alert().accept();
@@ -146,9 +146,9 @@ public class SpiceJetOneWayAndTwoWay {
      WebElement MAdults = dev.findElement(By.xpath("//select[@id='ctl00_mainContent_ddl_Adult']"));
      Select Madultsdrp = new Select(MAdults);
      Madultsdrp.selectByValue("2");
-   //  WebElement Mchilds = dev.findElement(By.xpath("//select[@id='ctl00_mainContent_ddl_Child']"));
-   //  Select Mchildsdrp = new Select(Mchilds);
-   //  Mchildsdrp.selectByValue("2");
+     WebElement Mchilds = dev.findElement(By.xpath("//select[@id='ctl00_mainContent_ddl_Child']"));
+    Select Mchildsdrp = new Select(Mchilds);
+    Mchildsdrp.selectByValue("2");
      dev.findElement(By.xpath(".//*[@id='divpaxinfo']")).click();
      System.out.println(dev.findElement(By.xpath(".//*[@id='divpaxinfo']")).getText());
 		Select MCuD = new Select(dev.findElement(By.id("ctl00_mainContent_DropDownListCurrency")));
